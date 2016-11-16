@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 140px 0 60px;
+  font-family: 'Raleway', sans-serif;
+  color: #222222;
+  transition: background-color 0.5s;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.color-default {
+  background-color: #fafafa;
+}
+
+.color-primary {
+  background-color: #0088cc;
+}
+
+.color-info {
+  background-color: #49afcd;
+}
+
+.color-success {
+  background-color: #5bb75b;
+}
+
+.color-warning {
+  background-color: #faa732;
+}
+
+.color-danger {
+  background-color: #da4f49;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0 10px;
+  background: #fafafa;
+  border-bottom: 5px solid #e6e6e6;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.button-list {
+  text-align: center;
+}
+
+.button-list li {
+  display: inline-block;
+  margin: 2px;
+  list-style: none;
+  vertical-align: top;
+}
+
+.button-list li .button {
+  padding: 0 35px;
+}
+
+.flip-clock-container {
+  width: 460px;
+  margin: 150px auto 0;
+}
+
+.menu-icons-panel {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 5px solid #e6e6e6;
+  margin: 0;
+  background: #fafafa;
+  list-style: none;
+  text-align: center;
+  z-index: 2;
+}
+
+.menu-icons-panel li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menu-icons-panel a {
+  color: #6f6f6f;
+  font-size: 2em;
+  transition: color 0.2s;
+}
+
+.menu-icons-panel a:hover,
+.menu-icons-panel a:active {
+  color: black;
+}
+
+.menu-icons-panel a.is-active {
+  color: #222222;
+}
+
+.panel-narrow {
+  max-width: 650px;
+}
+
+.panel-flat {
+  box-shadow: 4px 4px rgba(230, 230, 230, 0.5);
+  border-radius: 0;
+}
+
+.list-group-flat .list-group-item {
+  border-radius: 0;
+}
+
+.activity-edit-form {
+  width: 220px;
+}
+
+.button span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  text-align: left;
+}
+
+.activity-btn-preview-box {
+  width: 320px;
+  float: left;
+}
+
+.bounce-animation.ng-enter,
+.bounce-animation.ng-enter.ng-enter-active {
+  -webkit-animation: bounceInDown .5s;
+  animation: bounceInDown .5s;
+}
+
+.bounce-animation.ng-leave,
+.bounce-animation.ng-leave.ng-leave-active {
+  position: absolute;
+  width: 100%;
+  -webkit-animation: bounceOutDown .5s;
+  animation: bounceOutDown .5s;
+}
+
+.activity-list-animation.ng-enter {
+  -webkit-animation: rotateInUpLeft .5s;
+  animation: rotateInUpLeft .5s;
+}
+
+
+.activity-list-animation.ng-leave {
+  -webkit-animation: hinge 1s;
+  animation: hinge 1s;
+  z-index: 1;
+}
+
+
+.statistics-animation.ng-move {
+  -webkit-animation: bounce 1s;
+  animation: bounce 1s;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.full-width{
+  width: 100% ;
+}

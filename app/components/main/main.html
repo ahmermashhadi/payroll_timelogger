@@ -1,0 +1,15 @@
+<ul class="button-list">
+  <li ng-repeat="activity in vm.activities">
+    <button ng-click="vm.setActive(activity)" class="button button-xlarge button-{{activity.color}}" ng-class="{'is-active': vm.isActive(activity)}">{{activity.name}}</button>
+  </li>
+</ul>
+<div class="flip-clock-container" ng-if="vm.hasActive() && $root.loggedIn">
+  <dy-flip-clock time="{{vm.getDurationOfActiveActivity()}}"></dy-flip-clock>
+</div>
+
+<div class="full-width" ng-if="vm.hasActive() $$ $root.loggedIn">
+  <button ng-click="vm.stopTimer(activity)" class="button button-xlarge button-stop-time inline-block">Stop Timer</button>
+  <button ng-click="vm.resumeTimer(activity)" class="button button-xlarge button-resume-time inline-block">Resume Timer</button>
+  <button ng-click="vm.resetTimer(activity)" class="button button-xlarge button-reset-time inline-block">Reset Timer</button>
+</div>
+

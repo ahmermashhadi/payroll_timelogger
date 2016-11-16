@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="workTimeTracker">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ng-work-time-tracker</title>
+    <meta name="description" content="Simple time tracker that makes it easy to record what are you doing at office">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/obvious-buttons.css">
+    <link rel="stylesheet" href="bower_components/angular-flip-clock/dist/angular-flip-clock.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,700">
+  </head>
+  <body class="color-{{currentActivity.color || 'default'}}" ng-cloak>
+    <header class="header row">
+      <div class="col-lg-9">
+        <h1 class="header-title">Time Tracker</h1>
+        <p class="header-desctiption">We Just Want to Know What You're Working at and How Much :)</p>
+      </div>
+      <h4 class="col-lg-1" ng-show="$root.loggedIn">Welcome, {{$root.name}}</h4>
+      <div class="col-lg-2">
+        <button ng-show="!$root.loggedIn" class="button button-circle button-success inline-block" ng-click="$root.checkIn()"><img class="full-width" src="./img/icons/check.svg" alt=""></button>
+        <button ng-show="$root.loggedIn" class="button button-circle button-danger inline-block" ng-click="$root.checkOut()"><img class="full-width" src="./img/icons/exit.svg" alt=""></button>
+      </div>
+
+    </header>
+
+    <div ng-view class="bounce-animation"></div>
+
+    <navigation></navigation>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/tock/tock.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/bootstrap.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-flip-clock/dist/angular-flip-clock.full.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+
+
+    <script src="app/work-time-tracker.js"></script>
+    <script src="app/components/main/main.js"></script>
+    <script src="app/components/statistics/statistics.js"></script>
+    <script src="app/components/settings/settings.js"></script>
+    <script src="app/directives/navigation/navigation.js"></script>
+    <script src="app/filters/time-duration.js"></script>
+    <script src="app/models/activity.js"></script>
+    <script src="app/services/activities.js"></script>
+    <script src="app/services/dataService.factory.js"></script>
+
+  </body>
+</html>

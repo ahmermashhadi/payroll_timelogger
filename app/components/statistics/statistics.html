@@ -1,0 +1,22 @@
+<div class="panel panel-default panel-narrow panel-flat center-block">
+  <div class="panel-heading">
+    <h3 class="panel-title">Statistics</h3>
+  </div>
+  <div class="panel-body">
+    <h4>
+      Today ({{ vm.today | date:'longDate'}})
+      <a tooltip="Choose date" tooltip-placement="left" href="" class="pull-right"><i class="fa fa-calendar"></i></a>
+    </h4>
+    <hr>
+    <ul class="list-unstyled">
+      <li ng-repeat="activity in vm.activities | orderBy:'duration':true" class="statistics-animation">
+          <h5>{{activity.name}}</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-{{activity.color}}" style="width: {{vm.activities.getDurationInPct(activity)}}%">
+              {{activity.getDuration() | timeDuration}}
+            </div>
+          </div>
+      </li>
+    </ul>
+  </div>
+</div>
